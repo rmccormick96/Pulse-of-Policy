@@ -2,7 +2,7 @@
 
 ### Written by John Christenson
 
-**Note each function or class lines of code only counted once**
+*Note each function or class lines of code only counted once*
 
 ## text_embeddings.ipynb
 - unique lines of code
