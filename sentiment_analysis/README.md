@@ -1,4 +1,4 @@
-Sure, let's break down the purpose and relevance of each file along with the number of lines of code:
+Breaking down the purpose and relevance of the sentiment file...
 
 1. **Data Loading:** Import necessary libraries and load data from CSV files for NYT, Washington Post, and CNN. Essential for data processing.
 
