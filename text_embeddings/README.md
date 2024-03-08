@@ -1,6 +1,8 @@
 # Text Embeddings
 
-### Written and coded by John Christenson
+### Written by John Christenson, 
+- John Christenson individually coded: `master_key_df.ipynb`, `text_embeddings.ipynb`, and `text_embeddings_cosinesimilarity.ipynb`
+- John Christenson and Santiago Satizábal collaborated on `text_feature_creation.ipynb`
 
 ## `master_key_df.ipynb`
 Creates a master key dataframe, that uses the text_embeddings global index for bills, 'new_index', to create a monthly index for bills and news sources.  This monthly index occurs at the Congress and individual news source level, meaning there is a separate column for the bills as a whole and each news source by month.  This dataframe allows one to utilize the text embeddings to create cosine similarity scores by bill and news source by the 5 month window size.  This file utilizes 1224 lines of code (approximately 470 lines come from the BERT_Data class initially created in text_embeddings.ipynb).
