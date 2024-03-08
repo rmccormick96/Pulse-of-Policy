@@ -4,12 +4,14 @@
 
 ## Process
 
+1. Run each notebook separately to calculate sentiment on conservative and liberal media outlets.
+
 1. **Data Processing:**
    1. Import necessary libraries and load data from CSV files for Fox, Breitbart, NYT, Washington Post, and CNN.
    2. Keep only relevant columns ('text', 'title', 'url', 'date').
    3. Format date columns to a consistent '%Y-%m-%d' format.
 
-2. **Sentiment Analysis:**
+3. **Sentiment Analysis:**
    1. Set up sentiment analysis using a pre-trained model from the Transformers library.
    2. Perform sentiment analysis on text data in chunks.
    3. Apply sentiment analysis to each dataframe, add a 'Positive' column, and export the data to CSV files.
