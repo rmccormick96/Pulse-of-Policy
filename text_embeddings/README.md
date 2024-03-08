@@ -19,7 +19,7 @@ This notebook utilizes 1197 lines of code.
   
   
 ## `text_embeddings_cosinesimilarity.ipynb`
-This juypter notebook calculates the cosine similarity between each legislative bill and every news article by news source within a 5 month window.  Normalization is available not not utilized due to it making the data unuseable: cosine similarity is approximately 0.99.  Instead, no normalization is performed.  Utilizes 1525 lines of code (approximately 470 lines come from the BERT_Data class initially created in text_embeddings.ipynb).
+This juypter notebook calculates the cosine similarity between each legislative bill and every news article by news source within a 5 month window.  Normalization is available not not utilized due to it making the data unuseable: cosine similarity is approximately 0.99 for all results.  Instead, no normalization is performed.  Utilizes 1525 lines of code (approximately 470 lines come from the BERT_Data class initially created in text_embeddings.ipynb).
 
 
 
