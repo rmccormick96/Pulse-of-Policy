@@ -41,7 +41,7 @@ Utilizing TF-IDF Bag of Words for computational efficiency in calculating simila
 
 **Rationale:** Chosen for computational efficiency, this method provides a balanced approach between speed and accuracy in generating similarity scores.
 
-## 3. Text Embeddings
+## 5. Text Embeddings
 
 **Author:** John Christenson
 
