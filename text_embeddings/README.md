@@ -5,7 +5,7 @@
 
 
 ## master_key_df.ipynb
-- 1225 lines of code
+- 1224 lines of code
 
 
 ## text_embeddings.ipynb
