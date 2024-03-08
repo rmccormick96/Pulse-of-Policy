@@ -1,5 +1,7 @@
 # Legislation Collection Process
 
+#### Written and coded by John Christenson and Robert Surridge
+
 ## Process
 
 1. **Fetch Bills Data:**
