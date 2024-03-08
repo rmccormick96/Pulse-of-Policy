@@ -1,7 +1,7 @@
 # Text Embeddings
 
 ### Written by John Christenson
-- *Note: for lines of code, created duplicate jupyter notebooks, deleted print statements, uploaded to GitHub for lines of code, and then deleted them.  Many of the juypter notebooks below still possess print statements*
+- *Note: for lines of code, created duplicate jupyter notebooks, deleted print statements, uploaded to GitHub for lines of code, and then deleted them.  Many of the juypter notebooks below still possess print statements and their outputs.  ~471 lines of code in master_key_df.ipynb, text_embeddings.ipynb, and text_embeddings_cosinesimilarity.ipynb is the BERT_Data.class.*
 
 
 ## master_key_df.ipynb
