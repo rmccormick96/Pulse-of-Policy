@@ -1,5 +1,7 @@
 # Bill-Media Similarity Assessment Process
 
+#### Written and coded by Robert McCormick and Robert Surridge
+
 ## TF-IDF with GloVe Embeddings
 
 ### Overview
