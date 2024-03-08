@@ -7,7 +7,7 @@ Creates a master key dataframe, that uses the text_embeddings global index for b
 
 
 ## `text_embeddings.ipynb`
-Loads the ProPublica API data with the raw text of the bills.  This data is then cleaned.  Cleaning involves lower casing, fixing formatting, and removing unnecessary bill-specific lingo that creates noise to allow for a more accurate comparison between the text of the legislation and news sources.  Stop words are kept as they are important contextual information for BERT.  
+Loads the ProPublica API data with the raw text of the bills.  This data is then cleaned.  Cleaning involves lower casing, fixing formatting, and removing unnecessary bill-specific lingo that creates noise to allow for a more accurate comparison between the text of the legislation and news sources.  Stopwords are kept as they are important contextual information for BERT.  
 
 Using BERT-base-uncased, the clean text is tokenized and segmented out into segments of tokens with a max length of 510 tokens.  If the tokenized text of a bill or news article is over 510 tokens that is when the text is segmented out into blocks of 510 tokens (the total may be less in the final segment).  If the final or only segment is less than 510 tokens, then padding is added as required. A [CLS] token ID is added to the beginning and a [SEP] token ID is added to the end of each segment.  An attention mask is then applied to any padded token.  
 
