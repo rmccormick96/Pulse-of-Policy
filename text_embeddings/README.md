@@ -3,7 +3,7 @@
 ### Written and coded by John Christenson
 
 ## master_key_df.ipynb
-Creates a master key dataframe, that uses the text_embeddings global index for bills, 'new_index', to create a monthly index for bills and news sources.  This monthly index occurs at the Congress and individual news source level, meaning there is a separate column for the bills as a whole and each news source by month.  This dataframe allows one to utilize the text embeddings to create cosine similarity scores by bill and news source by the 5 month window size.  This file utilizes 1224 lines of code.
+Creates a master key dataframe, that uses the text_embeddings global index for bills, 'new_index', to create a monthly index for bills and news sources.  This monthly index occurs at the Congress and individual news source level, meaning there is a separate column for the bills as a whole and each news source by month.  This dataframe allows one to utilize the text embeddings to create cosine similarity scores by bill and news source by the 5 month window size.  This file utilizes 1224 lines of code (approximately 470 lines come from the BERT_Data class initially created in text_embeddings.ipynb).
 
 
 ## text_embeddings.ipynb
@@ -19,7 +19,7 @@ This notebook utilizes 1197 lines of code.
   
   
 ## text_embeddings_cosinesimilarity.ipynb
-Utilizes 1525 lines of code
+This juypter notebook calculates the cosine similarity between each legislative bill and every news article by news source within a 5 month window.  Normalization is available not not utilized due to it making the data unuseable: cosine similarity is approximately 0.99.  Instead, no normalization is performed.  Utilizes 1525 lines of code (approximately 470 lines come from the BERT_Data class initially created in text_embeddings.ipynb).
 
 
 
