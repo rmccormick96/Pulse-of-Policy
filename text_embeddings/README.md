@@ -7,6 +7,8 @@
 ## master_key_df.ipynb
 - 1224 lines of code
 
+Creates a master key dataframe, that uses the text_embeddings global index for bills, 'new_index', to create a monthly index for bills and news sources.  This monthly index occurs at the Congress and individual news source level, meaning there is a separate column for the bills as a whole and each news source by month.  This dataframe allows one to utilize the text embeddings to create cosine similarity scores by bill and news source by the 5 month window size.
+
 
 ## text_embeddings.ipynb
 - 1197 lines of code
