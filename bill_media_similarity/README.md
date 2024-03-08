@@ -1,3 +1,5 @@
+# Bill-Media Similarity Assessment Process
+
 ## TF-IDF with GloVe Embeddings
 
 ### Overview
@@ -27,14 +29,7 @@ The analysis is limited to the top 50 topics from over 750 topics generated thro
 
 ### Rationale
 
-- TF-IDF is chosen to understand the subject of the bill as it works well for a single document analysis.
-- GloVe embeddings are used for word representations as they capture semantic relationships between words.
-- Cosine similarity helps measure the similarity between word vectors.
-- Limiting the analysis to the top 50 topics reduces computational requirements.
-- PCA is applied to handle high dimensionality and capture the most relevant information.
-- Weighting words based on their importance aims to enhance the model's ability to recognize key terms.
-
-The scoring system aims to provide a comprehensive evaluation of the relationship between bills and media topics, considering both content similarity and sentiment. The process involves multiple steps to preprocess data, create embeddings, and apply dimensionality reduction for efficient analysis and interpretation.
+The approach employs TF-IDF for a nuanced understanding of individual bill subjects, leveraging its effectiveness in single-document analysis. GloVe embeddings are utilized to capture semantic nuances in word representations, while cosine similarity measures the closeness between word vectors. To manage computational complexity, the analysis focuses on the top 50 topics. Principal Component Analysis (PCA) is applied to address high-dimensionality issues and distill crucial information. Additionally, the incorporation of weighted words, reflecting their significance, enhances the model's capacity to discern pivotal terms. The scoring system, designed for a holistic evaluation, encompasses content similarity and sentiment analysis. This multi-step process involves data preprocessing, embedding creation, and dimensionality reduction to facilitate a comprehensive assessment of the relationship between bills and media topics.
 
 ## TF-IDF with Bag of Words
 
