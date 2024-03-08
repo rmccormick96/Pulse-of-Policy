@@ -7,13 +7,15 @@ Creates a master key dataframe, that uses the text_embeddings global index for b
 
 
 ## text_embeddings.ipynb
-Loads the ProPublica API data with the raw text of the bills.  This data is then cleaned.  Cleaning involves lower casing, fixing formatting, and removing unnecessary bill-specific lingo that creates noise to allow for a more accurate comparison between the text of the legislation and news sources.  Stop words are kept as they are important contextual information for BERT.  Using BERT-base-uncased, the clean text is tokenized and segmented out into segments of tokens with a max length of 510 tokens.  If the tokenized text of a bill or news article is over 510 tokens that is when the text is segmented out into blocks of 510 tokens (the total may be less in the final segment).  If the final or only segment is less than 510 tokens, then padding is added as required. A [CLS] token ID is added to the beginning and a [SEP] token ID is added to the end of each segment.  An attention mask is then applied to any padded token.  These segments are then input into the BERT model and the text embeddings are then pulled from the last hidden state.
+Loads the ProPublica API data with the raw text of the bills.  This data is then cleaned.  Cleaning involves lower casing, fixing formatting, and removing unnecessary bill-specific lingo that creates noise to allow for a more accurate comparison between the text of the legislation and news sources.  Stop words are kept as they are important contextual information for BERT.  
 
-The user may choose a combination of truncation, mean pooling, max pooling, utilizing CLS a single segment and, if necessary, mean pooling, max pooling, or skipping if there are multiple segments if the input segment is longer than 510 tokens post tokenization.
+Using BERT-base-uncased, the clean text is tokenized and segmented out into segments of tokens with a max length of 510 tokens.  If the tokenized text of a bill or news article is over 510 tokens that is when the text is segmented out into blocks of 510 tokens (the total may be less in the final segment).  If the final or only segment is less than 510 tokens, then padding is added as required. A [CLS] token ID is added to the beginning and a [SEP] token ID is added to the end of each segment.  An attention mask is then applied to any padded token.  
 
+These segments are then input into the BERT model and the text embeddings are then pulled from the last hidden state.  The user may choose a combination of truncation, mean pooling, max pooling, utilizing CLS a single segment and, if necessary, mean pooling, max pooling, or skipping if there are multiple segments if the input segment is longer than 510 tokens post tokenization.  
 
+This embedded tensor is then stacked with the rest of the created tensors representing each bill or article from the input source and returned as a large Pytorch tensor.
 
-Utilizes 1197 lines of code.
+This notebook utilizes 1197 lines of code.
   
 
 
