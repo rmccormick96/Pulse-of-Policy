@@ -12,7 +12,7 @@ The core of the notebook revolves around applying the BERTopic model to discover
 
 *Function `datasets_topics`:* This function is a wrapper around the BERTopic model, facilitating the topic modeling process. It takes the preprocessed text, fits the BERTopic model to extract topics, and annotates each document in the dataset with its corresponding topic ID and key terms representing the topic.
 
-####3. Data Trimming and Sentiment Analysis Preparation
+#### 3. Data Trimming and Sentiment Analysis Preparation
 To focus on relevant articles and prepare the dataset for sentiment analysis, the notebook employs data trimming.
 
 *Function `trimDf_sentiment`:* Adjusts the DataFrame based on the news source, selects specific columns, and preprocesses the text for sentiment analysis. It ensures that the dataset is consistent across different sources and timeframes suitable for further analysis.
