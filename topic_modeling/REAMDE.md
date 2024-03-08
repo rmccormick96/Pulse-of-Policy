@@ -1,7 +1,6 @@
 ## Introduction
 This Jupyter Notebook is designed to apply advanced machine learning techniques for topic modeling on a dataset of news articles. Through a series of defined functions and methodologies, it explores the extraction of meaningful topics from a large corpus, evaluates the sentiments associated with these topics, and visualizes the relationships between them.
 
-## Notebook Workflow
 #### 1. Data Preprocessing
 The notebook begins with preprocessing the textual data to prepare it for topic modeling and sentiment analysis.
 
