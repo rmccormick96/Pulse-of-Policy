@@ -15,11 +15,9 @@ These segments are then input into the BERT model and the text embeddings are th
 
 This embedded tensor is then stacked with the rest of the created tensors representing each bill or article from the input source and returned as a large Pytorch tensor.
 
-This notebook utilizes 1197 lines of code.
+This notebook utilizes 1197 lines of code.  
   
-
-
-
+  
 ## text_embeddings_cosinesimilarity.ipynb
 Utilizes 1525 lines of code
 
