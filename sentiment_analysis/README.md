@@ -1,5 +1,7 @@
 # Sentiment Analysis 
 
+#### Written and coded by John Christenson
+
 ## Process
 
 1. **Data Processing:**
