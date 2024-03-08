@@ -1,6 +1,6 @@
 # Sentiment Analysis 
 
-#### Written and coded by John Christenson
+#### Written and coded by Robert McCormick
 
 ## Process
 
