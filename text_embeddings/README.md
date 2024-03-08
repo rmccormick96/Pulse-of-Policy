@@ -5,17 +5,17 @@
 
 
 ## master_key_df.ipynb
-- unique lines of code
+- 1225 lines of code
 
 
 ## text_embeddings.ipynb
-- 1198 lines of code
+- 1197 lines of code
   
 
 
 
 ## text_embeddings_cosinesimilarity.ipynb
-- unique lines of code
+- 1525 lines of code
 
 
 
