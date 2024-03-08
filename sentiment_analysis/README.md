@@ -1,6 +1,6 @@
 # Sentiment Analysis 
 
-#### Written and coded by Robert McCormick
+#### Written and coded by Robert McCormick and Robert Surridge
 
 ## Process
 
