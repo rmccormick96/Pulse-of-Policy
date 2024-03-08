@@ -2,9 +2,39 @@
 
 ### Overview
 
+The notebook aims to create a scoring system between media topics and the contents of bills. To achieve this, the process involves using TF-IDF (Term Frequency-Inverse Document Frequency) for understanding the subject of the bill. The TF-IDF word frequency is then used to calculate word frequencies, and the top 10 words are extracted to create a word vector matching the number of words in a vector from media topics.
+
+The bill keywords and the top 10 words for a given topic are converted into GloVe embeddings (Global Vectors for Word Representation) using the GloVe 6B model. Cosine similarity is calculated for each word embedding in the bill keywords vector against every word embedding in the topic. The maximum similarity for each word in the bill is chosen, and the average of these top similarity scores is calculated to represent the overall similarity of the bill with a specific topic. Weights are applied to each word from the news topics in the hope of capturing the importance of each word across all topics.
+
+The analysis is limited to the top 50 topics from over 750 topics generated through topic modeling. Three datasets are created for evaluation: one with 100 columns of the top 50 similarity scores and 50 sentiment scores, the next with the top 20 similarity scores and 20 sentiment scores, and the last one with PCA analysis applied to the data from 100 columns.
+
 ### Process
 
+1. **TF-IDF Process for Bill Keywords:** TF-IDF is applied to the bill text to obtain the top 10 words that represent the content of the bill.
+
+2. **Word Embeddings and Similarity Scores:**
+   - The top words from bills and media topics are converted into GloVe embeddings.
+   - Cosine similarity is calculated between each word embedding in bill keywords and media topics.
+   - The maximum similarity for each word in the bill is selected, and the average is taken to represent the overall similarity.
+
+3. **Topic Modeling and Data Preparation:**
+   - Over 750 topics are generated, but the analysis is focused on the top 50 topics.
+   - Three datasets are created with different column combinations, and PCA is applied to reduce dimensionality.
+
+4. **Scoring and Evaluation:**
+   - Scores are applied to bills for each topic, considering both similarity and sentiment.
+   - The final datasets are created for evaluation, including one with weighted scores based on word importance.
+
 ### Rationale
+
+- TF-IDF is chosen to understand the subject of the bill as it works well for a single document analysis.
+- GloVe embeddings are used for word representations as they capture semantic relationships between words.
+- Cosine similarity helps measure the similarity between word vectors.
+- Limiting the analysis to the top 50 topics reduces computational requirements.
+- PCA is applied to handle high dimensionality and capture the most relevant information.
+- Weighting words based on their importance aims to enhance the model's ability to recognize key terms.
+
+The scoring system aims to provide a comprehensive evaluation of the relationship between bills and media topics, considering both content similarity and sentiment. The process involves multiple steps to preprocess data, create embeddings, and apply dimensionality reduction for efficient analysis and interpretation.
 
 ## TF-IDF with Bag of Words
 
@@ -13,37 +43,24 @@ The TF-IDF (Term Frequency-Inverse Document Frequency) Bag of Words method is em
 
 ### Process
 
-1. **Data Loading and Preprocessing:**
-   - Load the bill data from a CSV file (`115th_clean.csv`).
-   - Prepare the data, including cleaning text and converting dates.
-
-2. **Keyword Extraction:**
+1. **Keyword Extraction:**
    - Utilize TF-IDF to extract the top 10 keywords for each bill, considering custom stop words.
    - Implement the `get_top_words_bills` function to achieve this extraction.
 
-3. **Topic Summarization:**
-   - Summarize 50 monthly topics using aggregated lists from the past five months.
-   - Identify the top 10 keywords for each bill using TF-IDF.
-
-4. **Similarity Calculation:**
+2. **Similarity Calculation:**
    - Map bills to topic lists and calculate similarity scores.
    - Multiply keywords by topic weights based on media frequency.
    - Divide by the number of keywords (always 10) to normalize the scores.
 
-5. **Integration with Monthly Topics:**
+3. **Integration with Monthly Topics:**
    - Merge the bill data with monthly topic information, considering the introduced date.
    - Calculate the similarity score for each bill based on keywords and weights.
-
-6. **Score Normalization and Sentiment Integration:**
    - Normalize the similarity scores to a range of 0 to 1.
    - Incorporate average media sentiment scores for each monthly topic.
 
-7. **Results and Analysis:**
+4. **Results and Analysis:**
    - Examine the unique similarity scores to understand the distribution.
    - Provide statistics such as the number of bills with some similarity, minimum similarity, and maximum similarity.
-
-8. **Output:**
-   - Save the processed bill data with similarity scores to a CSV file (`bills_with_bow_similarity.csv`).
 
 ### Rationale
 The TF-IDF Bag of Words method is chosen for its computational efficiency, making it suitable for large datasets. However, the observed weakness in generating relatively low similarity scores necessitates caution when using it as a parameter in the final classification model. The approach ensures a balance between speed and accuracy, providing a foundation for further model refinement and analysis. The normalized scores and integration with media sentiment contribute to a comprehensive understanding of the bills in the context of monthly topics.
