@@ -1,7 +1,7 @@
 # Text Embeddings
 
 ### Written by John Christenson
-- *Note each function or class lines of code is only counted once*
+- *Note each function or class lines of code is only counted once across files*
 
 ## text_embeddings.ipynb
 - unique lines of code
