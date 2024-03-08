@@ -55,3 +55,11 @@ The notebook `master_key_df.ipynb` creates a master key dataframe, establishing 
 
 The notebook `Topic_modeling_Pulse_pol` is designed to apply advanced machine learning techniques for topic modeling on a dataset of news articles. Through a series of defined functions and methodologies, it explores the extraction of meaningful topics from a large corpus, evaluates the sentiments associated with these topics, and visualizes the relationships between them. It
 provides a comprehensive framework for topic modeling using BERTopic, equipped with preprocessing steps, topic extraction, and preparations for sentiment analysis. 
+
+## 7. Prediction
+
+**Author:** Pablo Montenegro Helfer
+
+The script `data_prediction.py` is a comprehensive tool for training and predicting the passage of legislative bills in the House of Representatives. It utilizes machine learning models on a benchmark dataset containing structured legislative and financial data from Pro Publica and the Federal Election Commission. The script systematically compares and enhances this benchmark by incorporating various text-related features extracted from media outlet articles, employing methodologies such as Bag of Words (BOW), Glove Embeddings (both unweighted and weighted), and BERT-based mean embeddings. The prediction models include Logistic Regression, CatBoost Classifier, Support Vector Machine, Random Forest Classifier, and XGBoost, and results are saved in Excel files for evaluation.
+
+The follow-up script, `data_prediction_best.py`, builds on the findings of the previous script by focusing on the Support Vector Machine model, identified as having the best results. This script assesses the model's performance on two datasets: the benchmark dataset without text-related features and a dataset enriched with text features using the MeanMean Text Embeddings with BERT methodology, which demonstrated superior results in the initial script. Notably, the script conducts a rigorous evaluation by performing a 100-times train-test split on each dataset, generating density plots with means of F1, Recall, and Precision scores. The results consistently favor the dataset with text-related information processed using the MeanMean Text Embeddings with BERT methodology, suggesting its robust and reliable predictive capabilities.
