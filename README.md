@@ -17,7 +17,13 @@ Using the ProPublica Congress API, bill data retrieval is implemented, saving it
 
 **Rationale:** This code systematically fetches bill data, complements it with raw text through web scraping, and provides quick insights into the dataset through bill count analysis. Incremental data saving ensures resilience to interruptions.
 
-## 2. Bill-Media Similarity Assessment Process
+## 3. Federal Election Commission and Legislative Bill Information Data Retrieval
+
+ **Author:** Pablo Montenegro Helfer
+
+The `data_processing.py` file orchestrates the integration of Federal Election Commission (FEC) data from the 115th Congress (2017-2018) with pre-scraped legislative bill information from ProPublica. The script extracts pertinent FEC details and generates essential variables for a machine learning model. It employs a histogram to assess the consistency of passed bills within the specified timeframe. The final step involves merging FEC and ProPublica dataframes based on text similarity derived from bill sponsors' names.
+
+## 4. Bill-Media Similarity Assessment Process
 
 ### a. TF-IDF with GloVe Embeddings
 
