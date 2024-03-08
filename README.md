@@ -48,3 +48,10 @@ Utilizing TF-IDF Bag of Words for computational efficiency in calculating simila
 The notebook `master_key_df.ipynb` creates a master key dataframe, establishing a monthly index for bills and news sources. It facilitates cosine similarity scores by bill and news source within a 5-month window. The notebook `text_embeddings.ipynb` loads ProPublica API data, cleans and tokenizes bill text using BERT-base-uncased. The text embeddings are generated using BERT, allowing for comprehensive analysis. The notebook `text_embeddings_cosinesimilarity.ipynb` utilizes cosine similarity for text embeddings, aiding in the comparison of bills and news sources. The notebook `text_feature_creation.ipynb` reads cosine similarity scores, calculates statistics, and merges data. The final datasets are saved as CSV files.
 
 **Rationale:** Employing BERT for text embeddings, the process considers computational efficiency and statistical insights, contributing to a comprehensive understanding of bill-media relationships. The data is accessible via Google Drive due to large file size.
+
+## 6. Topic modeling
+
+**Author:** Santiago Satizábal
+
+The notebook `Topic_modeling_Pulse_pol` is designed to apply advanced machine learning techniques for topic modeling on a dataset of news articles. Through a series of defined functions and methodologies, it explores the extraction of meaningful topics from a large corpus, evaluates the sentiments associated with these topics, and visualizes the relationships between them. It
+provides a comprehensive framework for topic modeling using BERTopic, equipped with preprocessing steps, topic extraction, and preparations for sentiment analysis. 
