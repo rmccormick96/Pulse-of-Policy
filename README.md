@@ -1,7 +1,7 @@
 # Pulse-of-Policy
 ## CAPP 30255 Final Project 
 
-## Part One: Sentiment Analysis
+## 1. Sentiment Analysis
 
 **Authors:** Robert McCormick and Robert Surridge
 
@@ -9,7 +9,7 @@ Utilizing a pre-trained model from the Transformers library, the sentiment analy
 
 **Rationale:** This process ensures a systematic approach to sentiment analysis across diverse news sources. By leveraging pre-trained models and preprocessing steps, the analysis becomes robust, adaptable, and transparent, enhancing reliability and comparability of results.
 
-## Legislation Collection Process
+## 2. Legislation Collection Process
 
 **Authors:** John Christenson and Robert Surridge
 
@@ -17,9 +17,9 @@ Using the ProPublica Congress API, bill data retrieval is implemented, saving it
 
 **Rationale:** This code systematically fetches bill data, complements it with raw text through web scraping, and provides quick insights into the dataset through bill count analysis. Incremental data saving ensures resilience to interruptions.
 
-## Bill-Media Similarity Assessment Process
+## 2. Bill-Media Similarity Assessment Process
 
-### TF-IDF with GloVe Embeddings
+### a. TF-IDF with GloVe Embeddings
 
 **Author:** Robert McCormick
 
@@ -27,7 +27,7 @@ This notebook aims to establish a scoring system between media topics and bill c
 
 **Rationale:** The approach employs TF-IDF for nuanced bill understanding and GloVe embeddings for semantic nuances. It incorporates weighted words and employs PCA for comprehensive evaluation.
 
-### TF-IDF with Bag of Words
+### b. TF-IDF with Bag of Words
 
 **Author:** Robert Surridge
 
@@ -35,7 +35,7 @@ Utilizing TF-IDF Bag of Words for computational efficiency in calculating simila
 
 **Rationale:** Chosen for computational efficiency, this method provides a balanced approach between speed and accuracy in generating similarity scores.
 
-## Text Embeddings
+## 3. Text Embeddings
 
 **Author:** John Christenson
 
