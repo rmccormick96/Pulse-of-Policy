@@ -1,4 +1,4 @@
-# Pulse-of-Policy
+# The Pulse of Policy - Predicting Legislative Success 
 ## CAPP 30255 Final Project 
 
 ## 1. Sentiment Analysis
